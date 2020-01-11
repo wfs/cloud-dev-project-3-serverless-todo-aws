@@ -164,11 +164,11 @@ Once you have finished developing your application, please set `apiId` and Auth0
 
 ## Client Dependency Diagram
 
-![Alt text](images/frontend_dependencygraph.svg?raw=true "Image 1")
+![Alt text](images/frontend_dependencygraph.png?raw=true "Image 1")
 
 ## Backend Dependency Diagram
 
-![Alt text](images/backend_dependencygraph.svg?raw=true "Image 1")
+![Alt text](images/backend_dependencygraph.png?raw=true "Image 1")
 
 **IMPORTANT**
 
