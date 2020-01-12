@@ -10,15 +10,15 @@ import { UpdateTodoRequest } from "../types/UpdateTodoRequest";
  * @returns todos
  */
 export async function getTodos(idToken: string): Promise<Todo[]> {
-  console.log("Fetching todos");
+  console.log("Fetching todos ...");
 
   const response = await Axios.get(`${apiEndpoint}/todos`, {
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${idToken}`
+      Authorization: `Bearer ${idToken}`
     }
   });
-  console.log("Todos:", response.data);
+  console.log("Todos: ", response.data);
   return response.data.items;
 }
 
@@ -38,7 +38,7 @@ export async function createTodo(
     {
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${idToken}`
+        Authorization: `Bearer ${idToken}`
       }
     }
   );
@@ -63,7 +63,7 @@ export async function patchTodo(
     {
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${idToken}`
+        Authorization: `Bearer ${idToken}`
       }
     }
   );
@@ -82,7 +82,7 @@ export async function deleteTodo(
   await Axios.delete(`${apiEndpoint}/todos/${todoId}`, {
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${idToken}`
+      Authorization: `Bearer ${idToken}`
     }
   });
 }
@@ -103,7 +103,7 @@ export async function getUploadUrl(
     {
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${idToken}`
+        Authorization: `Bearer ${idToken}`
       }
     }
   );
